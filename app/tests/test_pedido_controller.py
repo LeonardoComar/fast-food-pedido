@@ -2,7 +2,9 @@ import pytest
 from fastapi.testclient import TestClient
 from unittest import mock
 from main import app  # Supondo que o arquivo principal da aplicação seja `main.py`
-from app.controllers import router
+from app.controllers.pedido_controller import router as pedido_router
+from app.controllers.cliente_controller import router as cliente_router
+
 from app.models.schemas import Pedido
 
 # Criando o cliente de testes do FastAPI
